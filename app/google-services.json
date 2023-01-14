@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "704498340759",
+    "project_id": "t4t-main",
+    "storage_bucket": "t4t-main.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704498340759:android:6af803d5401cd55c436ad2",
+        "android_client_info": {
+          "package_name": "com.example.t4t"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704498340759-etr34pmi4qiij2hp58ssgk5smrm7k8og.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4-QygVQvGOzAMR-dUeob_hSVFwhDrxGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704498340759-etr34pmi4qiij2hp58ssgk5smrm7k8og.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

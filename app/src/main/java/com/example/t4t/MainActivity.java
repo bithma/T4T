@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                             for (DataSnapshot snap : dataSnapshot.getChildren()) {
                                 Student student = snap.getValue(Student.class);
                                 Log.v(TAG, "TEST " + student.getEmail());
+                                AppState.student = student;
                             }
                         } else {
                             // Create new student
@@ -97,17 +98,6 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-        // TEST CODE
-        // TEST CODE
-        // I REPEAT TEST CODE
-
-        // Write a message to the database
-//        DBHelper db = new DBHelper();
-//        db.writeNewStudent(test);
-
-        // END OF TEST CODE
-
     }
 
     @Override

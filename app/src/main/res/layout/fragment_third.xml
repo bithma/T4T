@@ -8,37 +8,44 @@
     tools:layout_editor_absoluteY="52dp">
 
     <Switch
-        android:id="@+id/switch6"
-        android:layout_width="127dp"
-        android:layout_height="17dp"
-        android:text="Switch"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch4"
-        app:layout_constraintVertical_bias="0.061" />
-
-    <Switch
-        android:id="@+id/switch7"
-        android:layout_width="127dp"
-        android:layout_height="17dp"
-        android:text="Switch"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch4"
-        app:layout_constraintVertical_bias="0.283" />
-
-    <Switch
         android:id="@+id/switch4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:text="Switch"
+        android:layout_width="312dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="10dp"
+        android:text="Allow Notifications"
+        app:layout_constraintBottom_toTopOf="@+id/switch8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch8"
+        android:layout_width="312dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="10dp"
+        android:text="General Notifications"
+        app:layout_constraintBottom_toTopOf="@+id/switch9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch9"
+        android:layout_width="312dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="10dp"
+        android:text="Events Reminder"
+        app:layout_constraintBottom_toTopOf="@+id/switch10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch10"
+        android:layout_width="312dp"
+        android:layout_height="33dp"
+        android:text="Weekly Summary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,24 +54,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Notifications"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
-
-    <Switch
-        android:id="@+id/switch5"
-        android:layout_width="127dp"
-        android:layout_height="17dp"
-        android:text="Switch"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch4"
-        app:layout_constraintVertical_bias="0.167" />
+        app:layout_constraintVertical_bias="0.127" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

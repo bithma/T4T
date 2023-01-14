@@ -18,4 +18,8 @@ public class Students {
     public String getEmail() {
         return this.mEmail;
     }
+
+    public String getmPreferences() {
+        return this.mPreferences;
+    }
 }

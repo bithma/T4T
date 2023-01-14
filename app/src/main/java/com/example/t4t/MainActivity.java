@@ -2,6 +2,8 @@ package com.example.t4t;
 
 import android.os.Bundle;
 
+import com.example.t4t.database.DBHelper;
+import com.example.t4t.database.Student;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.t4t.databinding.ActivityMainBinding;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,6 +47,17 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        // TEST CODE
+        // TEST CODE
+        // I REPEAT TEST CODE
+        Student test = new Student("dinoyan", "123", "mac", "nothing", "qw");
+        // Write a message to the database
+        DBHelper db = new DBHelper();
+        db.writeNewStudent(test);
+
+        // END OF TEST CODE
+
     }
 
     @Override

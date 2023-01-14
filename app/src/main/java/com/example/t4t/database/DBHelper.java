@@ -18,12 +18,12 @@ public class DBHelper {
         mDatabase.child("students").child(stu.getEmail()).setValue(stu);
     }
 
-    public void writeNewEvent() {
-
+    public void writeNewEvent(Event event) {
+        mDatabase.child("events").child(event.getEventName()).setValue(event);
     }
 
-    public void writeNewGroup() {
-
+    public void writeNewGroup(Group group) {
+        mDatabase.child("groups").child(group.getTeamName()).setValue(group);
     }
 
     public Student getStudent(String email) {

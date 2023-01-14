@@ -1,4 +1,4 @@
-package com.example.t4t.db;
+package com.example.t4t.database;
 
 public class Students {
     private String mEmail;

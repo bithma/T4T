@@ -8,6 +8,8 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Debug;
+import android.util.Log;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -16,16 +18,27 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.t4t.databinding.ActivityMainBinding;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+
+    private static final String TAG = "MainActivity";
+
+    private Button btn_continue;
+    private EditText txt_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +47,44 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+//        Student test = new Student("rd@example,com", "McMaster", "nothing", "qw");
+//        DBHelper.CreateStudent(test);
+
         setSupportActionBar(binding.toolbar);
+
+        txt_email = (EditText)findViewById(R.id.UEmailTB);
+
+        btn_continue = findViewById(R.id.ContinueButton);
+        btn_continue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = txt_email.getText().toString();
+                Log.v("Email", email);
+                AppState.email = email;
+                Query test = FirebaseDatabase.getInstance().getReference("students")
+                        .orderByChild("email")
+                        .equalTo(email.replace('.', ','));
+                test.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            for (DataSnapshot snap : dataSnapshot.getChildren()) {
+                                Student student = snap.getValue(Student.class);
+                                Log.v(TAG, "TEST " + student.getEmail());
+                            }
+                        } else {
+                            // Create new student
+
+                        }
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        Log.e(TAG, "onCancelled", databaseError.toException());
+                    }
+                });
+
+            }
+        });
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
@@ -51,10 +101,10 @@ public class MainActivity extends AppCompatActivity {
         // TEST CODE
         // TEST CODE
         // I REPEAT TEST CODE
-        Student test = new Student("dinoyan", "123", "mac", "nothing", "qw");
+
         // Write a message to the database
-        DBHelper db = new DBHelper();
-        db.writeNewStudent(test);
+//        DBHelper db = new DBHelper();
+//        db.writeNewStudent(test);
 
         // END OF TEST CODE
 

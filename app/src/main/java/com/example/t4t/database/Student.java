@@ -1,13 +1,13 @@
 package com.example.t4t.database;
 
-public class Students {
+public class Student {
     private String mEmail;
     private String mPassword;
     private String mSchool;
     private String mPreferences;
     private String mMisc;
 
-    public Students(String email, String password, String school, String preferences, String misc) {
+    public Student(String email, String password, String school, String preferences, String misc) {
         this.mEmail = email;
         this.mPassword = password;
         this.mSchool = school;
@@ -19,7 +19,7 @@ public class Students {
         return this.mEmail;
     }
 
-    public String getmPreferences() {
+    public String getPreferences() {
         return this.mPreferences;
     }
 }

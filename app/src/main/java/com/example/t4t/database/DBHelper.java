@@ -1,11 +1,20 @@
 package com.example.t4t.database;
 
+import android.util.Log;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
 public class DBHelper {
-    private DatabaseReference mDatabase;
+    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
-    mDatabase = FirebaseDatabase.getInstance().getReference();
+    private static final String TAG = "DBHelper";
 
-    public void writeNewStudent(Students stu) {
+    public void writeNewStudent(Student stu) {
         mDatabase.child("students").child(stu.getEmail()).setValue(stu);
     }
 
@@ -18,14 +27,14 @@ public class DBHelper {
     }
 
     public Student getStudent(String email) {
-        databaseReference ref = mDatabase.child("students");
-
-        Query studentQuery = ref.orderByChild(mString).equalTo(email);
-        studentQuery.addListenerForSingleValueEvent(new ValueEventListner () {
+        DatabaseReference ref = mDatabase.child("students");
+        Student student;
+        Query studentQuery = ref.orderByChild("mEmail").equalTo(email);
+        studentQuery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot singleSnapshot : dataSnapshot.getChildren()){
-                    Students stu = singleSnapshot.getValue(Students.class);
+                    //student = singleSnapshot.getValue(Student.class);
                 }
             }
             @Override
@@ -33,6 +42,6 @@ public class DBHelper {
                 Log.e(TAG, "onCancelled", databaseError.toException());
             }
         });
-        return stu;
+        return null;
     }
 }

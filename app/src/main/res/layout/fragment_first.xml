@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#FDE9CB"
     tools:context=".FirstFragment">
 
     <TextView
@@ -12,14 +12,14 @@
         android:layout_width="324dp"
         android:layout_height="69dp"
         android:text="SIGNIN / SIGNUP"
-        android:textAlignment="center"
+        android:textColor="#3C2323"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24" />
+        app:layout_constraintVertical_bias="0.214" />
 
     <Button
         android:id="@+id/ContinueButton"
@@ -29,41 +29,72 @@
         android:backgroundTint="@color/lightblue"
         android:foregroundTint="@color/black"
         android:text="Continue "
-        android:textColor="#4E342E"
         android:textColorHighlight="@color/black"
-        android:textColorHint="#C31C1C"
+        android:textColorHint="#9C27B0"
         android:textColorLink="@color/black"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.833"
+        app:layout_constraintTop_toBottomOf="@id/textview_first"
+        app:layout_constraintVertical_bias="0.735"
         app:strokeColor="@color/darkblue"
         tools:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="352dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UEmailTB">
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/UEmailTB"
         android:layout_width="310dp"
         android:layout_height="0dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="294dp"
+        android:layout_marginBottom="34dp"
         android:hint="University Email"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/PasswordTB"
+        android:layout_width="310dp"
+        android:layout_height="51dp"
+        android:hint="Password"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.586" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="300dp"
-        android:layout_height="96dp"
-        android:fontFamily="cursive"
-        android:text="Tinder 4 Teams"
-        android:textAlignment="center"
-        android:textSize="48sp"
+        android:layout_width="333dp"
+        android:layout_height="101dp"
+        android:fontFamily="@font/baloo_thambi"
+        android:text="Tinder 4 Teams  "
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.047" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

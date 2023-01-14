@@ -11,4 +11,8 @@ public class Group {
     public String getTeamName() {
         return mTeamName;
     }
+
+    public String getType() {
+        return mType;
+    }
 }

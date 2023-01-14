@@ -28,4 +28,9 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment2"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/calFragment"
+        android:name="com.example.t4t.calFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
 </navigation>

@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
         // Write a message to the database
         DBHelper db = new DBHelper();
         db.writeNewStudent(test);
+
+        Student test2 = new Student("bithma", "123", "mac", "nothing", "qw");
+        db.writeNewStudent(test2);
+
 
         // END OF TEST CODE
 

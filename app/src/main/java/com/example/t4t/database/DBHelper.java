@@ -34,7 +34,7 @@ public class DBHelper {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot singleSnapshot : dataSnapshot.getChildren()){
-                    //student = singleSnapshot.getValue(Student.class);
+                    Student student = singleSnapshot.getValue(Student.class);
                 }
             }
             @Override

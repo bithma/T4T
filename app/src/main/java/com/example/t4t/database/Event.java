@@ -16,4 +16,10 @@ public class Event {
     public String getEventName() {
         return mEventName;
     }
+    public String getDescription() {
+        return mDesc;
+    }
+    public Date getDate() {
+        return mDate;
+    }
 }

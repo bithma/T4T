@@ -10,10 +10,134 @@
         android:id="@+id/button_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="228dp"
         android:text="@string/previous"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Interest"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258" />
+
+    <ScrollView
+        android:layout_width="207dp"
+        android:layout_height="234dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkBox19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Engineering" />
+
+            <CheckBox
+                android:id="@+id/checkBox20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Business " />
+
+            <CheckBox
+                android:id="@+id/checkBox21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Social Sciences" />
+
+            <CheckBox
+                android:id="@+id/checkBox22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sciences" />
+
+            <CheckBox
+                android:id="@+id/checkBox23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sports/Fitness  " />
+
+            <CheckBox
+                android:id="@+id/checkBox24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cultural" />
+
+            <CheckBox
+                android:id="@+id/checkBox25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meeting People " />
+
+            <CheckBox
+                android:id="@+id/checkBox26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Games" />
+
+            <CheckBox
+                android:id="@+id/checkBox27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feeding " />
+
+            <CheckBox
+                android:id="@+id/checkBox28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Religious/Spiritual " />
+
+            <CheckBox
+                android:id="@+id/checkBox29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="International Students" />
+
+            <CheckBox
+                android:id="@+id/checkBox30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medical" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

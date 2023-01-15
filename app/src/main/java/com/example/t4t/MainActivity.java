@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Student test = new Student("rd@example,com", "McMaster", "nothing", "qw");
+        /* Student test = new Student("rd@example,com", "McMaster", "nothing", "qw");
         Student test1 = new Student("alshehak@mcmaster,ca", "McMaster", "", "qw");
         Student test2 = new Student("alib10@mcmaster,ca", "McMaster", "", "qw");
         Student test3 = new Student("davidr@mcmaster,ca", "McMaster", "", "qw");
@@ -54,7 +54,10 @@ public class MainActivity extends AppCompatActivity {
         DBHelper.CreateStudent(test1);
         DBHelper.CreateStudent(test2);
         DBHelper.CreateStudent(test3);
-        DBHelper.CreateStudent(test4);
+        DBHelper.CreateStudent(test4); */
+
+       // Event event1 = new Event ("Yoga Night", "Want to destrss and decopompress? Come join us for a fun night of yoga!", "Jan 17, 2022","DABC", "Engineeing","WIE");
+
 
         setSupportActionBar(binding.toolbar);
 

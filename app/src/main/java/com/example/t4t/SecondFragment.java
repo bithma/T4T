@@ -38,6 +38,7 @@ public class SecondFragment extends Fragment {
         });
     }
 
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();

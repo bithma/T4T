@@ -3,6 +3,7 @@ package com.example.t4t;
 import android.os.Bundle;
 
 import com.example.t4t.database.DBHelper;
+import com.example.t4t.database.Event;
 import com.example.t4t.database.Student;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -56,7 +57,14 @@ public class MainActivity extends AppCompatActivity {
         DBHelper.CreateStudent(test3);
         DBHelper.CreateStudent(test4); */
 
-       // Event event1 = new Event ("Yoga Night", "Want to destrss and decopompress? Come join us for a fun night of yoga!", "Jan 17, 2022","DABC", "Engineeing","WIE");
+       Event event1 = new Event ("Yoga Night", "Want to destrss and decopompress? Come join us for a fun night of yoga!", "Jan 17, 2023","DABC", "Engineeing","WIE");
+       Event event2 = new Event ("Health Sciences Charity Event  ", "Come join us for a fun event to support children", "March 19, 2023","HSL", "Health Sciences","Sciences");
+       Event event3 = new Event ("Board Games", "Join us for our board games social!", "Feb 15, 2023","BSB 135", "Religious / Spiritual ","COCA");
+       Event event4 = new Event ("Cycling class", "Come cycle with us to workout!", "April 1st, 2022","DABC", "Sports/Fitness","WIE");
+       DBHelper.CreateEvent(event1);
+       DBHelper.CreateEvent(event2);
+       DBHelper.CreateEvent(event3);
+       DBHelper.CreateEvent(event3);
 
 
         setSupportActionBar(binding.toolbar);

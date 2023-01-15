@@ -3,35 +3,37 @@ package com.example.t4t.database;
 public class Student {
     private String email;
     private String school;
-    private String preferences;
-    private String misc;
+    private String tags;
 
     public Student() {}
 
-    public Student(String email, String school, String preferences, String misc) {
+    public Student(String email, String school, String tags) {
         this.email = email;
         this.school = school;
-        this.preferences = preferences;
-        this.misc = misc;
+        this.tags = tags;
     }
 
     public String getEmail() {
-        return this.email;
+        return email;
     }
 
-    public String getPreferences() {
-        return this.preferences;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getSchool() { return  this.school; }
+    public String getSchool() {
+        return school;
+    }
 
-    public String getMisc() { return this.misc; }
+    public void setSchool(String school) {
+        this.school = school;
+    }
 
-    public void setEmail(String email) { this.email = email; }
+    public String getTags() {
+        return tags;
+    }
 
-    public void setPreferences(String preferences) { this.preferences = preferences; }
-
-    public void setSchool(String school) { this.school = school; }
-
-    public void setMisc(String misc) { this.misc = misc; }
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
 }

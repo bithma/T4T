@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-//        Student test = new Student("rd@example,com", "McMaster", "nothing", "qw");
+//        Student test = new Student("hello@kresteen.ca", "McMaster University", "NONE");
 //        DBHelper.CreateStudent(test);
 
         setSupportActionBar(binding.toolbar);

@@ -56,8 +56,4 @@ public class Group {
     public void setFaculty(String faculty) {
         this.faculty = faculty;
     }
-
-    public String getType() {
-        return mType;
-    }
 }

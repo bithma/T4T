@@ -14,6 +14,7 @@ import android.view.View;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
@@ -36,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    private Button btn_continue;
-    private EditText txt_email;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,12 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
-        txt_email = (EditText)findViewById(R.id.UEmailTB);
+//        btn_continue = findViewById(R.id.ContinueButton);
+//       btn_continue.setOnClickListener(new View.OnClickListener() {
+           // @Override
 
-        btn_continue = findViewById(R.id.ContinueButton);
-        btn_continue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            /*public void onClick(View view) {
                 String email = txt_email.getText().toString();
                 Log.v("Email", email);
                 AppState.email = email;
@@ -71,9 +68,14 @@ public class MainActivity extends AppCompatActivity {
                                 Student student = snap.getValue(Student.class);
                                 Log.v(TAG, "TEST " + student.getEmail());
                                 AppState.student = student;
-                                // Go to fragment main
+
+                                  NavHostFragment.findNavController(FirstFragment.this)
+                                       .navigate(R.id.action_FirstFragment_to_fragmentmain2);
+
                             }
                         } else {
+                            NavHostFragment.findNavController(FirstFragment.this)
+                                    .navigate(R.id.action_FirstFragment_to_SecondFragment);
                             // Create new student
                             // Go to fragment second
 
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 });
 
             }
-        });
+        });*/
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();

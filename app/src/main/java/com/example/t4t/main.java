@@ -35,7 +35,7 @@ public class main extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    private Button bTitle, bDesc, bGroup, bLocation, bDate;
+    private Button bTitle, bDesc, bGroup, bLocation, bDate, bNumLikes;
     private Button bPrev, bNext;
     private Button bHeart, bTeams, bNotifications, bFeedback;
     private ArrayList<Event> events = new ArrayList<>();
@@ -91,6 +91,7 @@ public class main extends Fragment {
         bTeams = view.findViewById(R.id.teams);
         bNotifications = view.findViewById(R.id.notification);
         bFeedback = view.findViewById(R.id.feedback);
+        bNumLikes = view.findViewById(R.id.numlikes);
         bPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -167,5 +168,6 @@ public class main extends Fragment {
         bGroup.setText(e.getGroup());
         bLocation.setText(e.getLocation());
         bDate.setText(e.getDate());
+        bNumLikes.setText(e.getHearts());
     }
 }

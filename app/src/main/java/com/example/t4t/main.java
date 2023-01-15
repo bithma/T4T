@@ -10,8 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.example.t4t.database.DBHelper;
 import com.example.t4t.database.Event;
+import com.example.t4t.database.Group;
 import com.example.t4t.database.Student;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -38,6 +41,8 @@ public class main extends Fragment {
     private Button bTitle, bDesc, bGroup, bLocation, bDate, bNumLikes;
     private Button bPrev, bNext;
     private Button bHeart, bTeams, bNotifications, bFeedback;
+
+    private Button bLike;
     private ArrayList<Event> events = new ArrayList<>();
     private int index = 0;
     private boolean liked = false;
@@ -92,6 +97,7 @@ public class main extends Fragment {
         bNotifications = view.findViewById(R.id.notification);
         bFeedback = view.findViewById(R.id.feedback);
         bNumLikes = view.findViewById(R.id.numlikes);
+        bLike = view.findViewById(R.id.bLike);
         bPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -134,6 +140,13 @@ public class main extends Fragment {
                         .navigate(R.id.action_FirstFragment_to_fragmentmain2);
             }
         });
+
+        bLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateCard();
+            }
+        });
         loadEvents();
         return view;
     }
@@ -169,5 +182,29 @@ public class main extends Fragment {
         bLocation.setText(e.getLocation());
         bDate.setText(e.getDate());
         bNumLikes.setText(e.getHearts());
+
+
+        Query teamQuery = FirebaseDatabase.getInstance().getReference("events")
+                .orderByChild("name");
+
+        teamQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot snap : dataSnapshot.getChildren()) {
+                        Event event = snap.getValue(Event.class);
+                        if (event.getName() == e.getName()) {
+                            int curr_hearts = event.getHearts();
+                            DBHelper.UpdateHearts(e.getName(),curr_hearts + 1);
+                        }
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
     }
 }

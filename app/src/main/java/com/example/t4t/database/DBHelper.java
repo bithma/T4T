@@ -2,6 +2,7 @@ package com.example.t4t.database;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.MutableData;
 
 public class DBHelper {
     public static DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -18,5 +19,9 @@ public class DBHelper {
 
     public static void CreateGroup(Group group) {
         mDatabase.child("groups").child(group.getName()).setValue(group);
+    }
+
+    public static void UpdateHearts(String name, int likes) {
+        mDatabase.getRef().child("Events").child(name).child("hearts").setValue(likes);
     }
 }

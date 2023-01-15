@@ -212,11 +212,22 @@
 
     <EditText
         android:id="@+id/numlikes"
-        android:layout_width="131dp"
-        android:layout_height="43dp"
+        android:layout_width="115dp"
+        android:layout_height="74dp"
+        android:layout_marginEnd="20dp"
+        android:background="#CFA4A4"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="507dp" />
+        tools:layout_editor_absoluteY="525dp" />
+
+    <CheckBox
+        android:id="@+id/bLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Like"
+        app:layout_constraintEnd_toStartOf="@+id/numlikes"
+        tools:layout_editor_absoluteY="537dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

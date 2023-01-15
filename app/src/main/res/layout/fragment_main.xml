@@ -40,6 +40,8 @@
         android:layout_width="348dp"
         android:layout_height="233dp"
         android:backgroundTint="#FA94C9E4"
+        android:clickable="false"
+        android:enabled="false"
         android:textColorLink="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,50 +52,44 @@
 
     <Button
         android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="231dp"
+        android:layout_height="45dp"
         android:background="@android:color/transparent"
+        android:clickable="false"
+        android:enabled="false"
         android:text="Group"
+        android:textAlignment="viewStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.211"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.174" />
+        app:layout_constraintVertical_bias="0.411" />
 
     <Button
         android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="335dp"
+        android:layout_height="82dp"
         android:background="@android:color/transparent"
+        android:clickable="false"
+        android:enabled="false"
         android:text="Desctription"
+        android:textAlignment="viewStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.234" />
-
-    <TextView
-        android:id="@+id/txt_title"
-        android:layout_width="43dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="53dp"
-        android:clickable="false"
-        android:text="Title"
-        app:layout_constraintBottom_toBottomOf="@+id/whogabooga"
-        app:layout_constraintEnd_toEndOf="@+id/whogabooga"
-        app:layout_constraintHorizontal_bias="0.38"
-        app:layout_constraintStart_toStartOf="@+id/whogabooga"
-        app:layout_constraintTop_toTopOf="@+id/whogabooga"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.237" />
 
     <Button
         android:id="@+id/title"
-        android:layout_width="142dp"
-        android:layout_height="58dp"
+        android:layout_width="346dp"
+        android:layout_height="54dp"
         android:background="@android:color/transparent"
+        android:clickable="false"
+        android:enabled="false"
         android:text="Title"
+        android:textAlignment="viewStart"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/whogabooga"
         app:layout_constraintEnd_toEndOf="@+id/whogabooga"
@@ -104,29 +100,35 @@
 
     <Button
         android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="251dp"
+        android:layout_height="45dp"
         android:background="@android:color/transparent"
+        android:clickable="false"
+        android:enabled="false"
         android:text="Date"
+        android:textAlignment="viewEnd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintHorizontal_bias="0.831"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintVertical_bias="0.365" />
 
     <Button
         android:id="@+id/location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="177dp"
+        android:layout_height="38dp"
         android:background="@android:color/transparent"
+        android:clickable="false"
+        android:enabled="false"
         android:text="Location"
+        android:textAlignment="viewEnd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintHorizontal_bias="0.886"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintVertical_bias="0.406" />
 
     <TextView
         android:id="@+id/textView2"
@@ -196,7 +198,7 @@
         app:layout_constraintVertical_bias="0.048" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
@@ -208,7 +210,7 @@
         app:layout_constraintVertical_bias="0.535" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/prev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"

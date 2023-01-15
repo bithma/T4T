@@ -35,16 +35,15 @@ public class main extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     private Button bTitle, bDesc, bGroup, bLocation, bDate;
-
+    private Button bPrev, bNext;
     private ArrayList<Event> events = new ArrayList<>();
+    private int index = 0;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public main() {
-        // Required empty public constructor
-    }
+    public main() {}
 
     /**
      * Use this factory method to create a new instance of
@@ -71,19 +70,37 @@ public class main extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        bTitle = getActivity().findViewById(R.id.title);
-        bDesc = getActivity().findViewById(R.id.description);
-        bGroup = getActivity().findViewById(R.id.group);
-        bLocation = getActivity().findViewById(R.id.location);
-        bDate = getActivity().findViewById(R.id.date);
-        loadEvents();
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        bTitle = view.findViewById(R.id.title);
+        bDesc = view.findViewById(R.id.description);
+        bGroup = view.findViewById(R.id.group);
+        bLocation = view.findViewById(R.id.location);
+        bDate = view.findViewById(R.id.date);
+        bPrev = view.findViewById(R.id.prev);
+        bNext = view.findViewById(R.id.next);
+        bPrev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                index = index>0?index-1:index;
+                updateCard();
+            }
+        });
+        bNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                index = index<events.size()-1?index+1:index;
+                updateCard();
+            }
+        });
+        loadEvents();
+        return view;
     }
 
     public void loadEvents() {
@@ -99,12 +116,22 @@ public class main extends Fragment {
                 } else {
                     Log.v(TAG, "NO EVENTS!");
                 }
-                Log.v(TAG, events.toString());
+                Log.v(TAG, "STRING "+events.get(0).getDate());
+                updateCard();
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.e(TAG, "onCancelled", databaseError.toException());
             }
         });
+    }
+
+    public void updateCard() {
+        Event e = events.get(index);
+        bTitle.setText(e.getName());
+        bDesc.setText(e.getDesc());
+        bGroup.setText(e.getGroup());
+        bLocation.setText(e.getLocation());
+        bDate.setText(e.getDate());
     }
 }

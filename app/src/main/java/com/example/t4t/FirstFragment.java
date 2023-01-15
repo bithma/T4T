@@ -23,7 +23,6 @@ public class FirstFragment extends Fragment {
 
     private FragmentFirstBinding binding;
 
-
     private static final String TAG = "FirstFragment";
 
     @Override
@@ -76,9 +75,6 @@ public class FirstFragment extends Fragment {
                         } else {
                             NavHostFragment.findNavController(FirstFragment.this)
                                     .navigate(R.id.action_FirstFragment_to_SecondFragment);
-                            // Create new student
-                            // Go to fragment second
-
                         }
                     }
                     @Override

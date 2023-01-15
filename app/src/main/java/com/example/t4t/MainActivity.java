@@ -60,48 +60,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         setSupportActionBar(binding.toolbar);
-
-//        btn_continue = findViewById(R.id.ContinueButton);
-//       btn_continue.setOnClickListener(new View.OnClickListener() {
-           // @Override
-
-            /*public void onClick(View view) {
-                String email = txt_email.getText().toString();
-                Log.v("Email", email);
-                AppState.email = email;
-                Query test = FirebaseDatabase.getInstance().getReference("students")
-                        .orderByChild("email")
-                        .equalTo(email.replace('.', ','));
-                test.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.exists()) {
-                            for (DataSnapshot snap : dataSnapshot.getChildren()) {
-                                Student student = snap.getValue(Student.class);
-                                Log.v(TAG, "TEST " + student.getEmail());
-                                AppState.student = student;
-
-                                  NavHostFragment.findNavController(FirstFragment.this)
-                                       .navigate(R.id.action_FirstFragment_to_fragmentmain2);
-
-                            }
-                        } else {
-                            NavHostFragment.findNavController(FirstFragment.this)
-                                    .navigate(R.id.action_FirstFragment_to_SecondFragment);
-                            // Create new student
-                            // Go to fragment second
-
-                        }
-                    }
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        Log.e(TAG, "onCancelled", databaseError.toException());
-                    }
-                });
-
-            }
-        });*/
-
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);

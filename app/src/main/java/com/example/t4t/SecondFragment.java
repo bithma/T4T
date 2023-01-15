@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.t4t.database.DBHelper;
+import com.example.t4t.database.Student;
 import com.example.t4t.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
@@ -32,6 +34,16 @@ public class SecondFragment extends Fragment {
         binding.ContinueButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String school;
+                if(AppState.email.contains("@mcmaster.ca"))
+                    school = "McMaster University";
+                else if(AppState.email.contains("@yorku.ca"))
+                    school = "York University";
+                else
+                    school = "Unknown";
+                Student newStudent = new Student(AppState.email.replace('.', ','), school, "NONE");
+                DBHelper.CreateStudent(newStudent);
+                AppState.student = newStudent;
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }

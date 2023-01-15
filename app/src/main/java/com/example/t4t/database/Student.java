@@ -7,7 +7,7 @@ public class Student {
 
     public Student() {}
 
-    public Student(String email, String school, String tags, String qw) {
+    public Student(String email, String school, String tags) {
         this.email = email;
         this.school = school;
         this.tags = tags;

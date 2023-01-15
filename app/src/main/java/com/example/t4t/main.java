@@ -79,7 +79,6 @@ public class main extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
-        // Inflate the layout for this fragment
         bTitle = view.findViewById(R.id.title);
         bDesc = view.findViewById(R.id.description);
         bGroup = view.findViewById(R.id.group);

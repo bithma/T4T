@@ -66,4 +66,10 @@ public class Event {
     public void setGroup(String group) {
         this.group = group;
     }
+    public String getDescription() {
+        return mDesc;
+    }
+    public Date getDate() {
+        return mDate;
+    }
 }

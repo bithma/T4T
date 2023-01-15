@@ -95,7 +95,5 @@ public class teams extends Fragment {
         });
 
         return inflater.inflate(R.layout.fragment_teams, container, false);
-
-
     }
 }

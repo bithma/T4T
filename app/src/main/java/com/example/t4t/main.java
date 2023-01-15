@@ -40,6 +40,7 @@ public class main extends Fragment {
     private Button bHeart, bTeams, bNotifications, bFeedback;
     private ArrayList<Event> events = new ArrayList<>();
     private int index = 0;
+    private boolean liked = false;
 
     // TODO: Rename and change types of parameters
     private String mParam1;

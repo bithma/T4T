@@ -7,16 +7,18 @@ public class Event {
     private String location;
     private String tags;
     private String group;
+    private int hearts;
 
     public Event() {}
 
-    public Event(String name, String desc, String date, String location, String tags, String group) {
+    public Event(String name, String desc, String date, String location, String tags, String group, int hearts) {
         this.name = name;
         this.desc = desc;
         this.date = date;
         this.location = location;
         this.tags = tags;
         this.group = group;
+        this.hearts = hearts;
     }
 
     public String getName() {
@@ -65,5 +67,13 @@ public class Event {
 
     public void setGroup(String group) {
         this.group = group;
+    }
+
+    public int getHearts() {
+        return hearts;
+    }
+
+    public void setHearts(int hearts) {
+        this.hearts = hearts;
     }
 }

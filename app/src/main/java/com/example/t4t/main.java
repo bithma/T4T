@@ -2,6 +2,7 @@ package com.example.t4t;
 
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatEditText;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -10,12 +11,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.example.t4t.database.DBHelper;
 import com.example.t4t.database.Event;
 import com.example.t4t.database.Group;
 import com.example.t4t.database.Student;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -38,11 +41,13 @@ public class main extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    private Button bTitle, bDesc, bGroup, bLocation, bDate, bNumLikes;
-    private Button bPrev, bNext;
-    private Button bHeart, bTeams, bNotifications, bFeedback;
+    private Button bTitle, bDesc, bGroup, bLocation, bDate;
 
-    private Button bLike;
+    private Button bNumLikes;
+    private Button bPrev, bNext;
+    private FloatingActionButton bHeart, bTeams, bNotifications, bFeedback;
+
+    private CheckBox bLike;
     private ArrayList<Event> events = new ArrayList<>();
     private int index = 0;
     private boolean liked = false;
@@ -96,7 +101,7 @@ public class main extends Fragment {
         bTeams = view.findViewById(R.id.teams);
         bNotifications = view.findViewById(R.id.notification);
         bFeedback = view.findViewById(R.id.feedback);
-        bNumLikes = view.findViewById(R.id.numlikes);
+        bNumLikes = view.findViewById(R.id.numLikes);
         bLike = view.findViewById(R.id.bLike);
         bPrev.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,9 +149,11 @@ public class main extends Fragment {
         bLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateCard();
+               // updateCard();
+                updateLike();
             }
         });
+
         loadEvents();
         return view;
     }
@@ -181,8 +188,13 @@ public class main extends Fragment {
         bGroup.setText(e.getGroup());
         bLocation.setText(e.getLocation());
         bDate.setText(e.getDate());
-        bNumLikes.setText(e.getHearts());
+        bNumLikes.setText(String.valueOf(e.getHearts()));
 
+        DBHelper.UpdateHearts(e.getName(),6);
+    }
+
+    public void updateLike() {
+        Event e = events.get(index);
 
         Query teamQuery = FirebaseDatabase.getInstance().getReference("events")
                 .orderByChild("name");
@@ -190,12 +202,22 @@ public class main extends Fragment {
         teamQuery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
                 if (dataSnapshot.exists()) {
                     for (DataSnapshot snap : dataSnapshot.getChildren()) {
+
                         Event event = snap.getValue(Event.class);
-                        if (event.getName() == e.getName()) {
+                        if ((event.getName().equals(e.getName()))) {
                             int curr_hearts = event.getHearts();
-                            DBHelper.UpdateHearts(e.getName(),curr_hearts + 1);
+                            if (bLike.isChecked()) {
+                                bNumLikes.setText(String.valueOf(e.getHearts() + 1));
+                                DBHelper.UpdateHearts(e.getName(), e.getHearts() + 1);
+                            }
+                            if (!bLike.isChecked()) {
+                                int temp = Integer.parseInt((String) bNumLikes.getText());
+                                bNumLikes.setText(String.valueOf(temp - 1));
+                                DBHelper.UpdateHearts(e.getName(), temp - 1);
+                            }
                         }
                     }
                 }
@@ -205,6 +227,5 @@ public class main extends Fragment {
 
             }
         });
-
     }
 }

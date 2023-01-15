@@ -1,5 +1,7 @@
 package com.example.t4t.database;
 
+import android.util.Log;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.MutableData;
@@ -22,6 +24,7 @@ public class DBHelper {
     }
 
     public static void UpdateHearts(String name, int likes) {
-        mDatabase.getRef().child("Events").child(name).child("hearts").setValue(likes);
+        Log.v("blah", "HEREEEEEEEEEE");
+        mDatabase.getRef().child("events").child(name).child("hearts").setValue(likes);
     }
 }

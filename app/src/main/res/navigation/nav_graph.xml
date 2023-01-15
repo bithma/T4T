@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_fragmentmain2"
+            app:destination="@id/fragmentmain" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -30,4 +33,39 @@
         android:name="com.example.t4t.BlankFragment"
         android:label="fragment_blank"
         tools:layout="@layout/fragment_blank" />
+
+    <fragment
+    android:id="@+id/fragmentmain"
+    android:name="com.example.t4t.main"
+    android:label="fragment_main"
+    tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_fragmentmain_to_fragmentnotifications"
+            app:destination="@id/fragmentnotifications" />
+        <action
+            android:id="@+id/action_fragmentmain_to_teamssaved"
+            app:destination="@id/teamssaved" />
+        <action
+            android:id="@+id/action_fragmentmain_to_fragmentteams"
+            app:destination="@id/fragmentteams" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentnotifications"
+        android:name="com.example.t4t.fragmentnotifications"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third"/>
+
+    <fragment
+        android:id="@+id/fragmentteams"
+        android:name="com.example.t4t.teams"
+        android:label="fragment_teams"
+        tools:layout="@layout/fragment_teams"/>
+    <fragment
+        android:id="@+id/teamssaved"
+        android:name="com.example.t4t.teamssaved"
+        android:label="teams_saved"
+        tools:layout="@layout/teams_saved"/>
+
+
 </navigation>

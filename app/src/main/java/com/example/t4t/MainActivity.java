@@ -45,9 +45,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         Student test = new Student("rd@example,com", "McMaster", "nothing", "qw");
-        Student test1 = new Student("alshehak@mcmaster.ca", "McMaster", "", "qw");
+        Student test1 = new Student("alshehak@mcmaster,ca", "McMaster", "", "qw");
+        Student test2 = new Student("alib10@mcmaster,ca", "McMaster", "", "qw");
+        Student test3 = new Student("davidr@mcmaster,ca", "McMaster", "", "qw");
+        Student test4 = new Student("bsbt55@mcmaster,ca", "McMaster", "", "qw");
 
         DBHelper.CreateStudent(test);
+        DBHelper.CreateStudent(test1);
+        DBHelper.CreateStudent(test2);
+        DBHelper.CreateStudent(test3);
+        DBHelper.CreateStudent(test4);
 
         setSupportActionBar(binding.toolbar);
 

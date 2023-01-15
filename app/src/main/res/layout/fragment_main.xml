@@ -210,4 +210,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.535" />
 
+    <EditText
+        android:id="@+id/numlikes"
+        android:layout_width="131dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="507dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

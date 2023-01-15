@@ -40,17 +40,7 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         binding.ContinueButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                NavHostFragment.findNavController(FirstFragment.this)
-//                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-//            }
-//        });
-//    }
-
-
             @Override
-
             public void onClick(View view) {
                 EditText txt_email = getActivity().findViewById(R.id.UEmailTB);
                 String email = txt_email.getText().toString();

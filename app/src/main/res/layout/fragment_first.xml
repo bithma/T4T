@@ -48,6 +48,9 @@
         android:layout_marginTop="294dp"
         android:hint="University Email"
         android:textColor="#000000"
+        android:maxLines="1"
+        android:inputType="text"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintStart_toStartOf="parent"

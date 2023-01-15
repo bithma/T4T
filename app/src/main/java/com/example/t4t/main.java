@@ -3,6 +3,7 @@ package com.example.t4t;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,6 +37,7 @@ public class main extends Fragment {
 
     private Button bTitle, bDesc, bGroup, bLocation, bDate;
     private Button bPrev, bNext;
+    private Button bHeart, bTeams, bNotifications, bFeedback;
     private ArrayList<Event> events = new ArrayList<>();
     private int index = 0;
 
@@ -85,6 +87,10 @@ public class main extends Fragment {
         bDate = view.findViewById(R.id.date);
         bPrev = view.findViewById(R.id.prev);
         bNext = view.findViewById(R.id.next);
+        bHeart = view.findViewById(R.id.heart);
+        bTeams = view.findViewById(R.id.teams);
+        bNotifications = view.findViewById(R.id.notification);
+        bFeedback = view.findViewById(R.id.feedback);
         bPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,6 +103,34 @@ public class main extends Fragment {
             public void onClick(View view) {
                 index = index<events.size()-1?index+1:index;
                 updateCard();
+            }
+        });
+        bHeart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(main.this)
+                        .navigate(R.id.action_FirstFragment_to_fragmentmain2);
+            }
+        });
+        bTeams.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(main.this)
+                        .navigate(R.id.action_FirstFragment_to_fragmentmain2);
+            }
+        });
+        bNotifications.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(main.this)
+                        .navigate(R.id.action_FirstFragment_to_fragmentmain2);
+            }
+        });
+        bFeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(main.this)
+                        .navigate(R.id.action_FirstFragment_to_fragmentmain2);
             }
         });
         loadEvents();

@@ -55,9 +55,8 @@
 
     <fragment
         android:id="@+id/fragmentnotifications"
-        android:name="com.example.t4t.fragmentnotifications"
-        android:label="fragment_third"
-        tools:layout="@layout/fragment_third"/>
+        android:name="com.example.t4t.NotificationsFragment"
+        android:label="fragment_third" />
 
     <fragment
         android:id="@+id/fragmentteams"
@@ -66,9 +65,8 @@
         tools:layout="@layout/fragment_teams"/>
     <fragment
         android:id="@+id/teamssaved"
-        android:name="com.example.t4t.teamssaved"
-        android:label="teams_saved"
-        tools:layout="@layout/teams_saved"/>
+        android:name="com.example.t4t.TeamsFragment"
+        android:label="teams_saved" />
 
 
 </navigation>

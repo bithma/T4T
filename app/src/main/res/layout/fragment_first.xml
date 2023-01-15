@@ -7,46 +7,24 @@
     android:background="#EDC7C7"
     tools:context=".FirstFragment">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="324dp"
-        android:layout_height="69dp"
-        android:text="SIGNIN / SIGNUP"
-        android:textAlignment="center"
-        android:textColor="#3C2323"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217" />
-
     <Button
         android:id="@+id/ContinueButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/lightblue"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
         android:backgroundTint="@color/greyblue"
-        android:foregroundTint="@color/black"
-        android:text="Continue "
-        android:textColorHighlight="@color/black"
-        android:textColorHint="#9C27B0"
-        android:textColorLink="@color/black"
-        android:visibility="visible"
+        android:text="sign in/up"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first"
-        app:layout_constraintVertical_bias="0.735"
-        app:strokeColor="@color/darkblue"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/UEmailTB"
         android:layout_width="321dp"
         android:layout_height="49dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginTop="184dp"
         android:background="#FAF3EDDA"
         android:backgroundTint="#FAF3EDDA"
         android:inputType="text"
@@ -83,11 +61,11 @@
         android:text="University Email"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/UEmailTB"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

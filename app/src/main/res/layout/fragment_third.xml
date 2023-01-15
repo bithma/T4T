@@ -7,11 +7,25 @@
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="52dp">
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="39dp"
+        android:layout_height="29dp"
+        android:background="#9F405D"
+        app:icon="@drawable/icons8_back_24__1_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
     <Switch
         android:id="@+id/switch4"
         android:layout_width="312dp"
         android:layout_height="33dp"
         android:layout_marginBottom="10dp"
+        android:background="@color/lightblue"
         android:text="Allow Notifications"
         app:layout_constraintBottom_toTopOf="@+id/switch8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +36,7 @@
         android:layout_width="312dp"
         android:layout_height="33dp"
         android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/lightblue"
         android:text="General Notifications"
         app:layout_constraintBottom_toTopOf="@+id/switch9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,6 +48,7 @@
         android:layout_width="312dp"
         android:layout_height="33dp"
         android:layout_marginBottom="10dp"
+        android:background="@color/lightblue"
         android:text="Events Reminder"
         app:layout_constraintBottom_toTopOf="@+id/switch10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +58,7 @@
         android:id="@+id/switch10"
         android:layout_width="312dp"
         android:layout_height="33dp"
+        android:background="@color/lightblue"
         android:text="Weekly Summary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

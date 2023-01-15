@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBF1F1"
+    android:background="#EDC7C7"
     tools:context=".main">
 
     <Button
         android:id="@+id/whogabooga"
         android:layout_width="348dp"
         android:layout_height="233dp"
-        android:backgroundTint="#FA94C9E4"
+        android:backgroundTint="#FAF3EDDA"
         android:backgroundTintMode="add"
         android:clickable="false"
         android:enabled="false"
@@ -63,6 +63,7 @@
         android:enabled="false"
         android:text="Title"
         android:textAlignment="viewStart"
+        android:textColorHint="@color/darkblue"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/whogabooga"
         app:layout_constraintEnd_toEndOf="@+id/whogabooga"
@@ -107,7 +108,7 @@
         android:id="@+id/textView2"
         android:layout_width="437dp"
         android:layout_height="82dp"
-        android:background="#EDB8B8"
+        android:background="@color/maroon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -176,19 +177,24 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tinder FOR Teams"
-        android:textSize="24sp"
+        android:fontFamily="sans-serif-black"
+        android:includeFontPadding="false"
+        android:text="Teams 4 U"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/maroon"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.052" />
 
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/greyblue"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -198,14 +204,14 @@
         app:layout_constraintVertical_bias="0.535" />
 
     <Button
-        android:id="@+id/prev"
+        android:id="@+id/next2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/greyblue"
         android:text="Back"
-        android:textAllCaps="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.535" />

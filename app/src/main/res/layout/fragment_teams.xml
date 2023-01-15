@@ -22,12 +22,12 @@
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="325dp"
-        android:layout_height="46dp"
+        android:layout_height="41dp"
         android:autofillHints="Search"
         android:queryHint="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.165" />

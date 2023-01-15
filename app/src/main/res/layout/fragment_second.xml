@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/darkblue"
     tools:context=".SecondFragment">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Confirm Password"
+        android:textColorLink="@color/maroon"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,6 +116,7 @@
                 android:id="@+id/checkBox26"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/darkblue"
                 android:text="Games" />
 
             <CheckBox
@@ -147,7 +150,7 @@
         android:layout_width="131dp"
         android:layout_height="46dp"
         android:background="@color/maroon"
-        android:backgroundTint="@color/maroon"
+        android:backgroundTint="@color/greyblue"
         android:text="Continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

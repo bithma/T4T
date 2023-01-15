@@ -108,21 +108,21 @@ public class main extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(main.this)
-                        .navigate(R.id.action_FirstFragment_to_fragmentmain2);
+                        .navigate(R.id.action_fragmentmain_to_teamssaved);
             }
         });
         bTeams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(main.this)
-                        .navigate(R.id.action_FirstFragment_to_fragmentmain2);
+                        .navigate(R.id.action_fragmentmain_to_fragmentteams);
             }
         });
         bNotifications.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(main.this)
-                        .navigate(R.id.action_FirstFragment_to_fragmentmain2);
+                        .navigate(R.id.action_fragmentmain_to_fragmentnotifications);
             }
         });
         bFeedback.setOnClickListener(new View.OnClickListener() {

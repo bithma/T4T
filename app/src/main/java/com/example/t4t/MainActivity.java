@@ -71,9 +71,11 @@ public class MainActivity extends AppCompatActivity {
                                 Student student = snap.getValue(Student.class);
                                 Log.v(TAG, "TEST " + student.getEmail());
                                 AppState.student = student;
+                                // Go to fragment main
                             }
                         } else {
                             // Create new student
+                            // Go to fragment second
 
                         }
                     }

@@ -71,6 +71,7 @@
                 android:id="@+id/checkBox19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableTint="#E38A8A"
                 android:text="Engineering" />
 
             <CheckBox
@@ -145,6 +146,8 @@
         android:id="@+id/ContinueButton2"
         android:layout_width="131dp"
         android:layout_height="46dp"
+        android:background="@color/maroon"
+        android:backgroundTint="@color/maroon"
         android:text="Continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

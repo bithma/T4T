@@ -36,7 +36,7 @@
         android:id="@+id/textView8"
         android:layout_width="326dp"
         android:layout_height="370dp"
-        android:background="#FA94C9E4"
+        android:background="@color/greyblue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

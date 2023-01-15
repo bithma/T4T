@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.example.t4t.database.Event;
 import com.example.t4t.database.Student;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -37,7 +38,7 @@ public class main extends Fragment {
 
     private Button bTitle, bDesc, bGroup, bLocation, bDate, bNumLikes;
     private Button bPrev, bNext;
-    private Button bHeart, bTeams, bNotifications, bFeedback;
+    private FloatingActionButton bHeart, bTeams, bNotifications, bFeedback;
     private ArrayList<Event> events = new ArrayList<>();
     private int index = 0;
     private boolean liked = false;

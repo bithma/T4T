@@ -63,7 +63,8 @@
         android:enabled="false"
         android:text="Title"
         android:textAlignment="viewStart"
-        android:textColorHint="@color/darkblue"
+        android:textColor="#100000"
+        android:textColorHint="@color/black"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/whogabooga"
         app:layout_constraintEnd_toEndOf="@+id/whogabooga"
@@ -204,7 +205,7 @@
         app:layout_constraintVertical_bias="0.535" />
 
     <Button
-        android:id="@+id/next2"
+        android:id="@+id/prev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/greyblue"

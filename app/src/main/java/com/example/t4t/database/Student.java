@@ -5,12 +5,21 @@ public class Student {
     private String school;
     private String tags;
 
+    private String favs;
+
     public Student() {}
 
     public Student(String email, String school, String tags) {
         this.email = email;
         this.school = school;
         this.tags = tags;
+    }
+
+    public Student(String email, String school, String tags, String favs) {
+        this.email = email;
+        this.school = school;
+        this.tags = tags;
+        this.favs = favs;
     }
 
     public String getEmail() {
@@ -35,5 +44,13 @@ public class Student {
 
     public void setTags(String tags) {
         this.tags = tags;
+    }
+
+    public void setFavs(String favs) {
+        this.favs += "," + favs;
+    }
+
+    public String getFavs() {
+        return this.favs;
     }
 }

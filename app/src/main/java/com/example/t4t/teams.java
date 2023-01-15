@@ -3,10 +3,22 @@ package com.example.t4t;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.example.t4t.database.Group;
+import com.example.t4t.database.Student;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +71,31 @@ public class teams extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        TextView teams = (TextView) getActivity().findViewById(R.id.textView8);
+
+        Query teamQuery = FirebaseDatabase.getInstance().getReference("group")
+                .orderByChild("name");
+
+        teamQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot snap : dataSnapshot.getChildren()) {
+                        Group group = snap.getValue(Group.class);
+                        TextView teams = (TextView) getActivity().findViewById(R.id.textView8);
+                        teams.setTextSize(20);
+                        teams.setText(group.getName());
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
         return inflater.inflate(R.layout.fragment_teams, container, false);
+
+
     }
 }
